@@ -1,5 +1,5 @@
 {% set name = "markdiffusion" %}
-{% set version = "0.1.6.post1" %}
+{% set version = "1.0.1.post1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 497d3886f8ab4a4abd319b073a8becef5a942678c3f66b393921ceadd23b1906
+  sha256: 998f287886e41c9f577a9476d015cab44930a486a6f90d8c75564aea579b0626
 
 build:
   number: 0
