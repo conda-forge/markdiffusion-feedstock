@@ -1,5 +1,5 @@
 {% set name = "markdiffusion" %}
-{% set version = "1.0.1.post1" %}
+{% set version = "1.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/m/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 998f287886e41c9f577a9476d015cab44930a486a6f90d8c75564aea579b0626
+  sha256: 756c17979469736eb95d2b428df149bea86eafacc86477fda992f6535d55ed8e
 
 build:
   number: 0
@@ -18,12 +18,13 @@ requirements:
   host:
     - python {{ python_min }}
     - pip
-    - setuptools >=68
+    - setuptools >=68,<81
     - wheel
   run:
     - python >={{ python_min }}
-    - pytorch >=2.0
-    - torchvision
+    - pytorch >=2.0,<2.11
+    - torchvision >=0.19,<0.26
+    - setuptools <81
     - numpy >=1.20
     - pillow >=8.0
     - py-opencv >=4.12
